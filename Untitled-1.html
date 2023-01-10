@@ -9,11 +9,11 @@
         background-color: white;
         display: flex;
         align-items: center;
+        justify-content: space-between;
       }
       .logo {
         font-size: 200%;
         color: blue;
-        margin-right: auto;
       }
       a {
         color: blue;
@@ -21,12 +21,23 @@
         padding: 10px 20px;
         text-decoration: none;
       }
+      .nav-links {
+        display: flex;
+      }
       .search-form {
-        margin-left: auto;
+        display: flex;
       }
       .search-input {
         border: 1px solid blue;
+        border-radius: 4px;
         padding: 5px 10px;
+      }
+      .search-button {
+        background-color: blue;
+        border: none;
+        color: white;
+        padding: 5px 10px;
+        border-radius: 4px;
       }
       .text {
         color: white;
@@ -35,17 +46,28 @@
         left: 50%;
         transform: translateX(-50%);
       }
+      @media (max-width: 600px) {
+        .nav-links {
+          display: none;
+        }
+        .search-form {
+          margin-left: auto;
+        }
+      }
     </style>
   </head>
   <body>
     <nav>
       <div class="logo">Ballon D'or</div>
-      <a href="#">2021 nominees</a>
-      <a href="#">2021 winner</a>
-      <a href="#">2022 nominees</a>
-      <a href="#">2022 winner</a>
+      <div class="nav-links">
+        <a href="#">2021 nominees</a>
+        <a href="#">2021 winner</a>
+        <a href="#">2022 nominees</a>
+        <a href="#">2022 winner</a>
+      </div>
       <form class="search-form">
         <input class="search-input" type="text" placeholder="Search...">
+        <button class="search-button" type="submit">Go</button>
       </form>
     </nav>
     <div class="text">The Ballon D'or is biggest individual annual award in football</div>
